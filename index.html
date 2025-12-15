@@ -1,78 +1,117 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<title>VYS Elektrik & Yapı Market</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body{margin:0;font-family:Arial;background:#f4f4f4;color:#333}
-header{background:#111;color:#fff;padding:30px;text-align:center}
-header img{max-width:140px}
-section{padding:40px}
-h2,h3{text-align:center}
-.urunler{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
-.urun{background:#fff;padding:15px;border-radius:10px;text-align:center;box-shadow:0 0 10px rgba(0,0,0,.1)}
-.urun img{width:100%;height:150px;object-fit:contain}
-.urun a{display:block;margin-top:10px;background:#25d366;color:#fff;padding:10px;border-radius:6px;text-decoration:none}
-footer{background:#111;color:#fff;text-align:center;padding:20px}
-</style>
+  <meta charset="UTF-8">
+  <title>VYS Elektrik & Yapı Market</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b132b;
+      color: #fff;
+    }
+    header {
+      text-align: center;
+      padding: 60px 20px;
+    }
+    header img {
+      width: 140px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      color: #fca311;
+    }
+    .btns a {
+      display: inline-block;
+      margin: 10px;
+      padding: 14px 26px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+    .call { background: #fca311; }
+    .wp { background: #25D366; }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #1c2541;
+      border-radius: 14px;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #000;
+      color: #aaa;
+    }
+  </style>
 </head>
+
 <body>
 
 <header>
-<img src="logo.png">
-<h1>VYS Elektrik & Yapı Market</h1>
-<p>Batman / Merkez</p>
-<a href="https://wa.me/905327117208" style="color:#25d366">WhatsApp: 0532 711 72 08</a>
+  <img src="https://i.imgur.com/1X6xHqS.png" alt="VYS Logo">
+  <h1>VYS Elektrik & Yapı Market</h1>
+  <p>Batman / Merkez</p>
+
+  <div class="btns">
+    <a class="call" href="tel:05327117208">📞 Hemen Ara</a>
+    <a class="wp" href="https://wa.me/905327117208">💬 WhatsApp</a>
+  </div>
 </header>
 
 <section>
-<h2>Ürün Gruplarımız</h2>
+  <h2>Ürün Kategorilerimiz</h2>
+  <div class="grid">
 
-<h3>🔌 Priz & Anahtar</h3>
-<div class="urunler">
-  <div class="urun"><img src="priz.jpg"><p>Topraklı Priz</p><a href="https://wa.me/905327117208">WhatsApp’tan Sor</a></div>
-  <div class="urun"><img src="anahtar.jpg"><p>Anahtar</p><a href="https://wa.me/905327117208">WhatsApp’tan Sor</a></div>
-</div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc">
+      <h3>Kablo & Tesisat</h3>
+    </div>
 
-<h3>💡 Aydınlatma</h3>
-<div class="urunler">
-  <div class="urun"><img src="led.jpg"><p>LED Ampul</p><a href="https://wa.me/905327117208">WhatsApp’tan Sor</a></div>
-</div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e">
+      <h3>Şalter & Priz</h3>
+    </div>
 
-<h3>⚡ Sigorta & Pano</h3>
-<div class="urunler">
-  <div class="urun"><img src="sigorta.jpg"><p>Otomatik Sigorta</p><a href="https://wa.me/905327117208">WhatsApp’tan Sor</a></div>
-</div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+      <h3>Aydınlatma</h3>
+    </div>
 
-<h3>🧰 Tesisat</h3>
-<div class="urunler">
-  <div class="urun"><img src="bant.jpg"><p>İzolasyon Bandı</p><a href="https://wa.me/905327117208">WhatsApp’tan Sor</a></div>
-</div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1590650153855-d9e808231d41">
+      <h3>Yapı & İnşaat</h3>
+    </div>
 
+  </div>
 </section>
 
 <footer>
-© 2025 VYS Elektrik & Yapı Market
+  © 2025 VYS Elektrik & Yapı Market
 </footer>
-<section style="background:#0f172a;color:white;padding:50px 20px;text-align:center">
-  <h2 style="font-size:28px">VYS Elektrik & Yapı Market</h2>
-  <p style="max-width:700px;margin:auto;font-size:16px">
-    Batman Merkez’de elektrik, tesisat, aydınlatma ve yapı
-    malzemeleri alanında hizmet vermekteyiz.
-    <br><br>
-    Ustalar ve bireysel müşteriler için
-    kaliteli ürün, hızlı tedarik ve güvenilir satış.
-  </p>
-
-  <a href="https://wa.me/905327117208"
-     style="display:inline-block;margin-top:20px;
-     background:#25d366;color:white;
-     padding:14px 24px;border-radius:10px;
-     text-decoration:none;font-weight:bold">
-     WhatsApp’tan Hemen İletişime Geç
-  </a>
-</section>
 
 </body>
 </html>
