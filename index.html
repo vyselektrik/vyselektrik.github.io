@@ -3,172 +3,149 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VYS Elektrik & Yapı Market | Batman Merkez</title>
-  <meta name="description" content="VYS Elektrik & Yapı Market – Batman Merkez'de elektrik, aydınlatma, tesisat ve yapı malzemeleri." />
-
+  <title>VYS Elektrik & Yapı Market | Batman</title>
+  <meta name="description" content="VYS Elektrik & Yapı Market – Batman Merkez'de elektrik, aydınlatma, kablo, tesisat ve yapı malzemeleri." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; }
-    body { background:#0b1320; color:#fff; }
-    a { text-decoration: none; }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background: #0b1220; color: #fff; }
+    a { text-decoration: none; color: inherit; }
 
     /* HERO */
     .hero {
-      position: relative;
-      min-height: 90vh;
-      background: url('https://images.unsplash.com/photo-1581091215367-59ab6c3c8c23') center/cover no-repeat;
+      min-height: 70vh;
+      background: radial-gradient(circle at top, #1a2a6c, #0b1220 70%);
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       padding: 40px 20px;
     }
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.45);
-    }
-    .hero-content {
-      position: relative;
-      max-width: 800px;
-    }
-    .hero img {
-      width: 120px;
-      margin-bottom: 20px;
-    }
-    .hero h1 {
-      font-size: 36px;
-      color: #f4c16d;
-      margin-bottom: 10px;
-    }
-    .hero p {
-      font-size: 17px;
-      opacity: .9;
-      margin-bottom: 25px;
-    }
-    .buttons {
-      display: flex;
-      gap: 15px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
+    .hero img { width: 110px; margin-bottom: 20px; }
+    .hero h1 { font-size: 38px; font-weight: 700; color: #f5c76a; }
+    .hero p { max-width: 700px; margin: 15px auto 30px; color: #d1d5db; font-size: 16px; }
+    .buttons { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
     .btn {
       padding: 14px 26px;
-      border-radius: 10px;
-      font-weight: bold;
-      color: #000;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: 0.3s;
     }
-    .call { background: #f4c16d; }
-    .whatsapp { background: #25d366; color:#fff; }
+    .btn-call { background: #f5c76a; color: #000; }
+    .btn-call:hover { background: #ffd98a; }
+    .btn-wa { background: #22c55e; color: #fff; }
+    .btn-wa:hover { background: #16a34a; }
 
-    /* CATEGORIES */
-    .section { padding: 70px 20px; max-width: 1200px; margin: auto; }
-    .section h2 { text-align: center; color:#f4c16d; margin-bottom: 40px; }
-    .grid {
+    /* SECTION */
+    section { padding: 70px 20px; max-width: 1200px; margin: auto; }
+    section h2 { text-align: center; margin-bottom: 40px; font-size: 28px; color: #f5c76a; }
+
+    /* PRODUCTS */
+    .product-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 25px;
     }
-    .card {
-      background: #111a2e;
-      border-radius: 14px;
+    .product-card {
+      background: linear-gradient(145deg, #111827, #020617);
+      border-radius: 18px;
       overflow: hidden;
-      box-shadow: 0 10px 25px rgba(0,0,0,.4);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      transition: transform 0.3s;
     }
-    .card img { width: 100%; height: 160px; object-fit: cover; }
-    .card h3 { padding: 15px; text-align: center; }
-
-    /* SHOWCASE */
-    .showcase-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-      gap: 20px;
+    .product-card:hover { transform: translateY(-8px); }
+    .product-card img {
+      width: 100%; height: 180px; object-fit: cover;
     }
-    .showcase-grid img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.4);
-    }
+    .product-card div { padding: 20px; }
+    .product-card h3 { margin-bottom: 8px; font-size: 18px; }
+    .product-card p { font-size: 14px; color: #cbd5f5; }
 
     /* FOOTER */
     footer {
-      background:#080f1a;
-      padding: 40px 20px;
+      background: #020617;
       text-align: center;
+      padding: 30px 20px;
+      color: #9ca3af;
       font-size: 14px;
-      opacity: .8;
     }
 
-    /* FLOAT WHATSAPP */
-    .wa-float {
+    /* WHATSAPP FLOAT */
+    .whatsapp {
       position: fixed;
-      right: 20px;
       bottom: 20px;
-      background: #25d366;
-      color:#fff;
+      right: 20px;
+      background: #22c55e;
+      color: #fff;
       padding: 14px 20px;
       border-radius: 30px;
-      font-weight: bold;
+      font-weight: 600;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
     }
   </style>
 </head>
 <body>
 
   <!-- HERO -->
-  <section class="hero">
-    <div class="hero-content">
-      <img src="logo.png" alt="VYS Elektrik Logo">
+  <div class="hero">
+    <div>
+      <img src="https://via.placeholder.com/150x150?text=VYS" alt="VYS Logo">
       <h1>VYS Elektrik & Yapı Market</h1>
-      <p>Batman Merkez'de elektrik, aydınlatma, tesisat ve yapı malzemeleri. Ustalara ve bireysel müşterilere kaliteli ürün.</p>
+      <p>Batman Merkez'de elektrik, aydınlatma, kablo, tesisat ve yapı malzemeleri. Ustalara ve bireysel müşterilere kaliteli ve uygun fiyatlı ürünler.</p>
       <div class="buttons">
-        <a class="btn call" href="tel:05327117208">📞 Hemen Ara</a>
-        <a class="btn whatsapp" href="https://wa.me/905327117208">💬 WhatsApp</a>
+        <a class="btn btn-call" href="tel:+905327117208">📞 Hemen Ara</a>
+        <a class="btn btn-wa" href="https://wa.me/905327117208" target="_blank">💬 WhatsApp</a>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- CATEGORIES -->
-  <section class="section">
-    <h2>Ürün Kategorileri</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d1">
-        <h3>Elektrik Malzemeleri</h3>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231">
-        <h3>Aydınlatma Ürünleri</h3>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e">
-        <h3>Kablo & Tesisat</h3>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
-        <h3>Yapı & İnşaat</h3>
-      </div>
-    </div>
-  </section>
+  <!-- PRODUCTS -->
+  <section>
+    <h2>Öne Çıkan Ürünler</h2>
+    <div class="product-grid">
 
-  <!-- SHOWCASE -->
-  <section class="section">
-    <h2>Mağazamızdan Seçmeler</h2>
-    <div class="showcase-grid">
-      <img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9">
-      <img src="https://images.unsplash.com/photo-1581091215367-59ab6c3c8c23">
-      <img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d1">
-      <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231">
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1581093588401-22c48b58d4b4" alt="">
+        <div>
+          <h3>Viko Anahtar & Priz</h3>
+          <p>Modern tasarım, uzun ömürlü kullanım</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1581091012184-5c7a94c6a92b" alt="">
+        <div>
+          <h3>LED Panel & Spot</h3>
+          <p>Düşük enerji tüketimi, yüksek aydınlatma</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e" alt="">
+        <div>
+          <h3>Elektrik Kablosu</h3>
+          <p>NYM – TTR – Antigron Kablo Çeşitleri</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1560185127-6ed189bf02d2" alt="">
+        <div>
+          <h3>Yapı & İnşaat Malzemeleri</h3>
+          <p>Tesisat ve yapı için tüm ihtiyaçlar</p>
+        </div>
+      </div>
+
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <p>📍 Batman / Merkez</p>
+    <p>© 2025 VYS Elektrik & Yapı Market – Batman Merkez</p>
     <p>📞 0532 711 72 08</p>
-    <p>© 2025 VYS Elektrik & Yapı Market</p>
   </footer>
 
-  <a class="wa-float" href="https://wa.me/905327117208">WhatsApp</a>
+  <a class="whatsapp" href="https://wa.me/905327117208" target="_blank">WhatsApp</a>
 
 </body>
 </html>
